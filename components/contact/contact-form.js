@@ -36,3 +36,26 @@ function ContactForm() {
       return () => clearTimeout(timer);
     }
   }, [requestStatus]);
+
+  async function sendMessageHandler(event) {
+    event.preventDefault();
+
+    // optional: add client-side validation
+
+    setRequestStatus('pending');
+
+    try {
+      await sendContactData({
+        email: enteredEmail,
+        name: enteredName,
+        message: enteredMessage,
+      });
+      setRequestStatus('success');
+      setEnteredMessage('');
+      setEnteredEmail('');
+      setEnteredName('');
+    } catch (error) {
+      setRequestError(error.message);
+      setRequestStatus('error');
+    }
+  }
