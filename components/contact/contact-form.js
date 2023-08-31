@@ -18,3 +18,10 @@ async function sendContactData(contactDetails) {
     throw new Error(data.message || 'Something went wrong!');
   }
 }
+
+function ContactForm() {
+  const [enteredEmail, setEnteredEmail] = useState('');
+  const [enteredName, setEnteredName] = useState('');
+  const [enteredMessage, setEnteredMessage] = useState('');
+  const [requestStatus, setRequestStatus] = useState(); // 'pending', 'success', 'error'
+  const [requestError, setRequestError] = useState();
