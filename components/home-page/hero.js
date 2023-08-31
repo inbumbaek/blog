@@ -11,7 +11,7 @@ function Hero() {
       <h1>Hi, I'm Inbum</h1>
       <p>
         I blog about web development - especially frontend frameworks like
-        Angular or React.
+        React.
       </p>
     </section>
   );
