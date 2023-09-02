@@ -112,3 +112,13 @@ function ContactForm() {
             />
           </div>
         </div>
+        <div className={classes.control}>
+          <label htmlFor='message'>Your Message</label>
+          <textarea
+            id='message'
+            rows='5'
+            required
+            value={enteredMessage}
+            onChange={(event) => setEnteredMessage(event.target.value)}
+          ></textarea>
+        </div>
