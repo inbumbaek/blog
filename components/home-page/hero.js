@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 import classes from "./hero.module.css";
 
@@ -6,8 +6,13 @@ function Hero() {
   return (
     <section className={classes.hero}>
       <div className={classes.image}>
-        <Image src="/images/site/inbum.JPG" alt="An image showing Inbum" width={300} height={300} />
-        </div>
+        <Image
+          src="/images/site/inbum.JPG"
+          alt="An image showing Inbum"
+          width={300}
+          height={300}
+        />
+      </div>
       <h1>Hi, I'm Inbum</h1>
       <p>
         I blog about web development - especially frontend frameworks like
