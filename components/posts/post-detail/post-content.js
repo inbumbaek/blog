@@ -27,3 +27,18 @@ function PostContent(props) {
 
       if (node.children[0].tagName === 'img') {
         const image = node.children[0];
+
+        return (
+          <div className={classes.image}>
+            <Image
+              src={`/images/posts/${post.slug}/${image.properties.src}`}
+              alt={image.alt}
+              width={600}
+              height={300}
+            />
+          </div>
+        );
+      }
+
+      return <p>{paragraph.children}</p>;
+    },
